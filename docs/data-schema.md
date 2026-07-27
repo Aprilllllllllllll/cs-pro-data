@@ -1,140 +1,240 @@
-# CS 职业选手资料库 — 数据 Schema 说明
+# Data Schema Reference
 
-## 目录结构
+## Directory Structure
 
 ```
 data/
-├── players/                    # 选手资料，按当前战队文件夹分类
-│   ├── <team_id>/              # 战队文件夹名 = team_id
-│   │   ├── _team.json          # 该战队自身信息
-│   │   ├── <player_id>.json    # 选手资料文件
+├── players/                    # Player profiles, organized by current team folder
+│   ├── <team_id>/              # Folder name = team_id
+│   │   ├── _team.json          # Team metadata
+│   │   ├── <player_id>.json    # Player profile
 │   │   └── ...
-│   ├── _retired/               # 退役选手
-│   └── _free_agents/           # 无战队选手
-├── index.json                  # 自动生成的全局索引（禁止手动编辑）
-└── templates/                  # 人工填写模板
+│   ├── _retired/               # Retired players
+│   └── _free_agents/           # Players without a team
+├── index.json                  # Auto-generated global index (do not edit manually)
+└── templates/                  # Templates for manual data entry
     ├── player_template.json
     └── team_template.json
 ```
 
-## 选手 JSON Schema
+## Player JSON Schema
 
-### 顶层字段
+### Top-level Fields
 
-| 字段 | 类型 | 必填 | 说明 |
-|------|------|------|------|
-| `id` | string | ✅ | 选手唯一 ID，游戏别名全小写，如 `s1mple`、`zywoo` |
-| `name` | string | ✅ | 真实姓名（英文），如 `Oleksandr Kostyliev` |
-| `native_name` | string \| null | ❌ | 母语姓名 |
-| `country` | string | ✅ | ISO 3166-1 alpha-2 两位国家代码，如 `UA`、`FR` |
-| `country_name` | string | ✅ | 国家英文名，如 `Ukraine` |
-| `birth_date` | string \| null | ❌ | 出生日期，格式 `YYYY-MM-DD` |
+| Field | Type | Required | Description |
+|-------|------|:---:|-------------|
+| `id` | string | ✅ | Unique player ID, game alias in lowercase, e.g. `s1mple`, `zywoo` |
+| `name` | string | ✅ | Real name (English), e.g. `Oleksandr Kostyliev` |
+| `native_name` | string \| null | | Native language name |
+| `country` | string | ✅ | ISO 3166-1 alpha-2 country code, e.g. `UA`, `FR` |
+| `country_name` | string | ✅ | Country name in English, e.g. `Ukraine` |
+| `birth_date` | string \| null | | Birth date, format `YYYY-MM-DD` |
 | `status` | enum | ✅ | `active` / `inactive` / `retired` / `banned` |
-| `roles` | enum[] | ❌ | `AWPer` / `IGL` / `Entry` / `Support` / `Rifler` / `Lurker` / `Coach` |
-| `years_active` | string \| null | ❌ | 活跃年份范围，如 `2013-present` |
+| `roles` | enum[] | | `AWPer` / `IGL` / `Entry` / `Support` / `Rifler` / `Lurker` / `Coach` |
+| `years_active` | string \| null | | Active years, e.g. `2013-present` |
 
 ### current_team
 
-| 字段 | 类型 | 必填 | 说明 |
-|------|------|------|------|
-| `team_id` | string | ✅ | 当前战队 ID |
-| `join_date` | string | ✅ | 入队日期，格式 `YYYY-MM-DD` |
-| `contract_expiry` | string \| null | ❌ | 合同到期日 |
+| Field | Type | Required | Description |
+|-------|------|:---:|-------------|
+| `team_id` | string | ✅ | Current team ID |
+| `join_date` | string | ✅ | Join date, format `YYYY-MM-DD` |
+| `contract_expiry` | string \| null | | Contract expiry date |
 
-### team_history[] 
+### team_history[]
 
-| 字段 | 类型 | 必填 | 说明 |
-|------|------|------|------|
-| `team_id` | string | ✅ | 历史战队 ID |
-| `start_date` | string | ✅ | 入队日期 |
-| `end_date` | string \| null | ❌ | 离队日期，仍在队填 `null` |
-| `status` | enum | ❌ | `starter` / `substitute` / `stand-in` / `loan` |
+| Field | Type | Required | Description |
+|-------|------|:---:|-------------|
+| `team_id` | string | ✅ | Historical team ID |
+| `start_date` | string | ✅ | Join date |
+| `end_date` | string \| null | | Leave date, `null` if still on the team |
+| `status` | enum | | `starter` / `substitute` / `stand-in` / `loan` |
 
 ### major_titles[]
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `major_name` | string | Major 赛事全名 |
-| `date` | string | 夺冠日期 |
-| `team_id` | string | 夺冠时所属战队 |
-| `placement` | string | 名次，冠军为 `1st` |
+| Field | Type | Description |
+|-------|------|-------------|
+| `major_name` | string | Full Major tournament name |
+| `date` | string | Championship date |
+| `team_id` | string | Team at time of win |
+| `placement` | string | Placement, `1st` for champion |
+
+### hltv_top20_rankings[]
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `year` | int | Year of ranking |
+| `rank` | int | Rank (1-20) |
+
+### mvp_medals[]
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `tournament` | string | Tournament name |
+| `date` | string | Date |
+| `tier` | string | Tournament tier: `S-Tier` / `A-Tier` / `B-Tier` |
 
 ### statistics
 
-| 字段 | 类型 | 说明 | 来源 |
-|------|------|------|------|
+| Field | Type | Description | Source |
+|-------|------|-------------|--------|
 | `hltv_rating` | float \| null | HLTV Rating 2.0 | HLTV |
-| `total_maps` | int \| null | 总地图数 | HLTV |
-| `total_kills` | int \| null | 总击杀数 | HLTV |
-| `headshot_percentage` | float \| null | 爆头率 % | HLTV |
-| `kills_per_round` | float \| null | 每回合击杀 KPR | HLTV |
-| `deaths_per_round` | float \| null | 每回合死亡 DPR | HLTV |
-| `impact_rating` | float \| null | 影响力评分 | HLTV |
+| `total_maps` | int \| null | Total maps played | HLTV |
+| `total_kills` | int \| null | Total kills | HLTV |
+| `headshot_percentage` | float \| null | Headshot % | HLTV |
+| `kills_per_round` | float \| null | Kills per round (KPR) | HLTV |
+| `deaths_per_round` | float \| null | Deaths per round (DPR) | HLTV |
+| `impact_rating` | float \| null | Impact rating | HLTV |
 | `kast` | float \| null | KAST % | HLTV |
-| `adr` | float \| null | 每回合伤害 ADR | HLTV |
+| `adr` | float \| null | Average damage per round | HLTV |
 
-### settings（游戏设置与外设）
+### social_links
 
-| 字段 | 类型 | 说明 | 来源 |
-|------|------|------|------|
-| `sensitivity` | float \| null | 鼠标灵敏度 | ProSettings |
-| `edpi` | float \| null | 有效 DPI | ProSettings |
-| `resolution` | string \| null | 分辨率，如 `1280x960` | ProSettings |
-| `aspect_ratio` | string \| null | 宽高比，如 `4:3` | ProSettings |
+| Field | Type | Description |
+|-------|------|-------------|
+| `twitter` | string \| null | Twitter/X profile URL |
+| `twitch` | string \| null | Twitch channel URL |
+| `instagram` | string \| null | Instagram profile URL |
+| `youtube` | string \| null | YouTube channel URL |
+
+### settings (Peripherals & Game Settings)
+
+| Field | Type | Description | Source |
+|-------|------|-------------|--------|
+| `crosshair_code` | string \| null | Crosshair code (CS2 format) | ProSettings |
+| `config_url` | string \| null | Config file download URL | ProSettings |
+| `sensitivity` | float \| null | Mouse sensitivity | ProSettings |
+| `edpi` | float \| null | Effective DPI | ProSettings |
+| `zoom_sensitivity` | float \| null | Zoom sensitivity | ProSettings |
+| `raw_input` | bool \| null | Raw input enabled | ProSettings |
+| `resolution` | string \| null | e.g. `1280x960` | ProSettings |
+| `aspect_ratio` | string \| null | e.g. `4:3` | ProSettings |
 | `scaling_mode` | string \| null | `Stretched` / `Black Bars` / `Native` | ProSettings |
-| `monitor` | string \| null | 显示器型号 | ProSettings |
-| `mouse` | string \| null | 鼠标型号 | ProSettings |
-| `keyboard` | string \| null | 键盘型号 | ProSettings |
-| `headset` | string \| null | 耳机型号 | ProSettings |
-| `mousepad` | string \| null | 鼠标垫型号 | ProSettings |
+| `monitor` | string \| null | Monitor model | ProSettings |
+| `mouse` | string \| null | Mouse model | ProSettings |
+| `keyboard` | string \| null | Keyboard model | ProSettings |
+| `headset` | string \| null | Headset model | ProSettings |
+| `mousepad` | string \| null | Mousepad model | ProSettings |
 
-### 元数据
+### Platform Identifiers
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `last_updated` | string | ISO 8601 格式更新时间 |
-| `sources` | string[] | 数据来源：`liquipedia` / `prosettings` / `hltv_manual` / `esl` / `blast` |
-| `notes` | string \| null | 备注 |
+| Field | Type | Description |
+|-------|------|-------------|
+| `steam_id` | string \| null | Steam ID (STEAM_1:0:xxx format) |
+| `steam_id64` | string \| null | Steam 64-bit ID |
+| `faceit_profile` | string \| null | Faceit profile URL |
+| `esea_profile` | string \| null | ESEA profile URL |
+
+### Metadata
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `last_updated` | string | ISO 8601 timestamp |
+| `sources` | string[] | Data sources: `liquipedia` / `prosettings` / `hltv_manual` / `esl` / `blast` |
+| `notes` | string \| null | Free-form notes |
 
 ---
 
-## 战队 JSON Schema
+## Team JSON Schema
 
-| 字段 | 类型 | 必填 | 说明 |
-|------|------|------|------|
-| `id` | string | ✅ | 战队唯一 ID，全小写 |
-| `name` | string | ✅ | 战队全名 |
-| `short_name` | string \| null | ❌ | 缩写 |
-| `country` | string | ✅ | 国家代码或 `international` |
-| `country_name` | string | ✅ | 国家英文名 |
+| Field | Type | Required | Description |
+|-------|------|:---:|-------------|
+| `id` | string | ✅ | Unique team ID, lowercase |
+| `name` | string | ✅ | Full team name |
+| `short_name` | string \| null | | Abbreviation |
+| `country` | string | ✅ | Country code or `international` |
+| `country_name` | string | ✅ | Country name in English |
 | `region` | enum | ✅ | `EU` / `NA` / `SA` / `CIS` / `ASIA` / `OCE` / `MEA` |
-| `founded` | string \| null | ❌ | 成立年份 |
+| `organization` | string \| null | | Parent organization name |
+| `logo_url` | string \| null | | Logo image URL |
+| `founded` | string \| null | | Year founded |
+| `disbanded` | string \| null | | Year disbanded (if applicable) |
 | `status` | enum | ✅ | `active` / `inactive` / `disbanded` |
-| `current_roster` | string[] | ❌ | 当前阵容选手 ID 列表 |
-| `coach` | string \| null | ❌ | 教练 ID |
-| `achievements.major_titles` | int | ❌ | Major 冠军数 |
-| `achievements.major_appearances` | int | ❌ | Major 参赛次数 |
-| `achievements.s_tier_titles` | int | ❌ | S 级赛事冠军数 |
-| `achievements.hltv_ranking_best` | int \| null | ❌ | HLTV 最高排名 |
+| `current_roster` | string[] | | Current player IDs |
+| `coach` | string \| null | | Coach player ID |
+| `analyst` | string \| null | | Analyst player ID |
+| `achievements.major_titles` | int | | Major championships won |
+| `achievements.major_appearances` | int | | Major appearances |
+| `achievements.s_tier_titles` | int | | S-Tier tournament wins |
+| `achievements.total_prize_money` | float \| null | | Total prize money (USD) |
+| `achievements.hltv_ranking_best` | int \| null | | Best HLTV world ranking |
+| `achievements.hltv_ranking_best_date` | string \| null | | Date of best ranking |
+| `social_links.twitter` | string \| null | | Twitter/X URL |
+| `social_links.website` | string \| null | | Official website |
+| `social_links.instagram` | string \| null | | Instagram URL |
+| `last_updated` | string | | ISO 8601 timestamp |
+| `sources` | string[] | | Data sources |
+| `notes` | string \| null | | Free-form notes |
 
 ---
 
-## 索引文件 `data/index.json`
+## Index File (`data/index.json`)
 
-由 `scripts/build_index.sh` 自动生成，提供：
+Auto-generated by `scripts/build_index.sh`. Provides:
 
-- **正向索引**：`players.<id>` → 文件路径 + 摘要信息
-- **反向索引**：
-  - `by_country` — 按国家代码分组
-  - `by_role` — 按角色分组
-  - `by_status` — 按状态分组
-- **统计**：`player_count`、`team_count`
+- **Forward index**: `players.<id>` → file path + summary
+- **Reverse indexes**:
+  - `by_country` — grouped by country code
+  - `by_role` — grouped by role
+  - `by_status` — grouped by player status
+- **Stats**: `player_count`, `team_count`
 
-## 校验流程
+## Enum Values
 
-运行 `bash scripts/validate.sh` 执行四层校验：
+### Player Status
+| Value | Description |
+|-------|-------------|
+| `active` | Currently competing |
+| `inactive` | On break or benched |
+| `retired` | No longer competing |
+| `banned` | Suspended / banned |
 
-1. **结构验证** — JSON 可解析 + Pydantic 模型校验
-2. **语义验证** — 枚举值、日期、国家代码合法性
-3. **交叉引用** — 选手与战队之间的 team_id / roster 引用完整性
-4. **一致性验证** — 文件名与 id 匹配、文件夹与 current_team 匹配
+### Player Roles
+| Value | Description |
+|-------|-------------|
+| `AWPer` | Primary sniper |
+| `IGL` | In-game leader |
+| `Entry` | Entry fragger |
+| `Support` | Support player |
+| `Rifler` | Rifle specialist |
+| `Lurker` | Lurker / flanker |
+| `Coach` | Team coach |
+
+### Team Membership Status
+| Value | Description |
+|-------|-------------|
+| `starter` | Starting roster |
+| `substitute` | Official substitute |
+| `stand-in` | Temporary stand-in |
+| `loan` | On loan from another team |
+
+### Region
+| Value | Description |
+|-------|-------------|
+| `EU` | Europe |
+| `NA` | North America |
+| `SA` | South America |
+| `CIS` | CIS / Eastern Europe |
+| `ASIA` | Asia-Pacific |
+| `OCE` | Oceania |
+| `MEA` | Middle East & Africa |
+
+### Team Status
+| Value | Description |
+|-------|-------------|
+| `active` | Active roster |
+| `inactive` | No active roster |
+| `disbanded` | Organization dissolved |
+
+## Country Codes
+
+Use [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) two-letter codes. For multinational teams, use `international`.
+
+## Validation Pipeline
+
+Run `bash scripts/validate.sh` to execute 4 layers of checks:
+
+1. **Structure** — JSON parsability + Pydantic model validation
+2. **Semantics** — Enum values, date formats, country code validity
+3. **Cross-reference** — Team ID references between players and `_team.json` files
+4. **Consistency** — File name matches `id`, folder matches `current_team.team_id`
