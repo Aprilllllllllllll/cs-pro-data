@@ -1,6 +1,6 @@
 {
-  "last_built": "2026-07-27T01:35:22.907749Z",
-  "player_count": 7,
+  "last_built": "2026-07-27T01:38:40.790169Z",
+  "player_count": 6,
   "team_count": 4,
   "players": {
     "dev1ce": {
@@ -14,36 +14,16 @@
       "major_titles": 0,
       "file_path": "data\\players\\100thieves\\dev1ce.json"
     },
-    "device": {
-      "name": "device",
-      "country": "",
-      "status": "active",
-      "current_team": null,
-      "roles": [],
-      "major_titles": 0,
-      "file_path": "data\\players\\_free_agents\\device.json"
-    },
-    "niko": {
-      "name": "Nikola Kovač",
-      "country": "BA",
-      "status": "active",
-      "current_team": "falcons",
-      "roles": [
-        "Entry"
-      ],
-      "major_titles": 0,
-      "file_path": "data\\players\\_free_agents\\niko.json"
-    },
     "s1mple": {
-      "name": "Oleksandr Kostyliev",
+      "name": "Oleksandr Olehovych Kostyliev",
       "country": "UA",
       "status": "active",
-      "current_team": "navi",
+      "current_team": "bcgame",
       "roles": [
-        "AWPer",
-        "Rifler"
+        "Rifler",
+        "AWPer"
       ],
-      "major_titles": 1,
+      "major_titles": 0,
       "file_path": "data\\players\\bcgame\\s1mple.json"
     },
     "karrigan": {
@@ -57,6 +37,17 @@
       ],
       "major_titles": 0,
       "file_path": "data\\players\\falcons\\karrigan.json"
+    },
+    "niko": {
+      "name": "Nikola Kovač",
+      "country": "BA",
+      "status": "active",
+      "current_team": "falcons",
+      "roles": [
+        "Entry"
+      ],
+      "major_titles": 0,
+      "file_path": "data\\players\\falcons\\niko.json"
     },
     "donk": {
       "name": "Danil Kryshkovets",
@@ -117,9 +108,6 @@
     }
   },
   "by_country": {
-    "": [
-      "device"
-    ],
     "BA": [
       "niko"
     ],
@@ -159,7 +147,6 @@
   "by_status": {
     "active": [
       "dev1ce",
-      "device",
       "donk",
       "karrigan",
       "niko",
