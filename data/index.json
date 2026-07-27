@@ -1,19 +1,38 @@
 {
-  "last_built": "2026-07-27T00:48:30.539259Z",
-  "player_count": 4,
+  "last_built": "2026-07-27T01:35:22.907749Z",
+  "player_count": 7,
   "team_count": 4,
   "players": {
+    "dev1ce": {
+      "name": "Nicolai Hvilshøj Reedtz",
+      "country": "DK",
+      "status": "active",
+      "current_team": "100thieves",
+      "roles": [
+        "AWPer"
+      ],
+      "major_titles": 0,
+      "file_path": "data\\players\\100thieves\\dev1ce.json"
+    },
+    "device": {
+      "name": "device",
+      "country": "",
+      "status": "active",
+      "current_team": null,
+      "roles": [],
+      "major_titles": 0,
+      "file_path": "data\\players\\_free_agents\\device.json"
+    },
     "niko": {
       "name": "Nikola Kovač",
       "country": "BA",
       "status": "active",
       "current_team": "falcons",
       "roles": [
-        "Rifler",
-        "IGL"
+        "Entry"
       ],
       "major_titles": 0,
-      "file_path": "data\\players\\falcons\\niko.json"
+      "file_path": "data\\players\\_free_agents\\niko.json"
     },
     "s1mple": {
       "name": "Oleksandr Kostyliev",
@@ -25,7 +44,19 @@
         "Rifler"
       ],
       "major_titles": 1,
-      "file_path": "data\\players\\navi\\s1mple.json"
+      "file_path": "data\\players\\bcgame\\s1mple.json"
+    },
+    "karrigan": {
+      "name": "Finn Andersen",
+      "country": "DK",
+      "status": "active",
+      "current_team": "falcons",
+      "roles": [
+        "IGL",
+        "Entry"
+      ],
+      "major_titles": 0,
+      "file_path": "data\\players\\falcons\\karrigan.json"
     },
     "donk": {
       "name": "Danil Kryshkovets",
@@ -33,10 +64,9 @@
       "status": "active",
       "current_team": "spirit",
       "roles": [
-        "Entry",
-        "Rifler"
+        "Entry"
       ],
-      "major_titles": 1,
+      "major_titles": 0,
       "file_path": "data\\players\\spirit\\donk.json"
     },
     "zywoo": {
@@ -45,9 +75,10 @@
       "status": "active",
       "current_team": "vitality",
       "roles": [
-        "AWPer"
+        "AWPer",
+        "Rifler"
       ],
-      "major_titles": 1,
+      "major_titles": 0,
       "file_path": "data\\players\\vitality\\zywoo.json"
     }
   },
@@ -86,8 +117,15 @@
     }
   },
   "by_country": {
+    "": [
+      "device"
+    ],
     "BA": [
       "niko"
+    ],
+    "DK": [
+      "dev1ce",
+      "karrigan"
     ],
     "FR": [
       "zywoo"
@@ -101,24 +139,29 @@
   },
   "by_role": {
     "AWPer": [
+      "dev1ce",
       "s1mple",
       "zywoo"
     ],
     "Entry": [
-      "donk"
-    ],
-    "IGL": [
+      "donk",
+      "karrigan",
       "niko"
     ],
+    "IGL": [
+      "karrigan"
+    ],
     "Rifler": [
-      "donk",
-      "niko",
-      "s1mple"
+      "s1mple",
+      "zywoo"
     ]
   },
   "by_status": {
     "active": [
+      "dev1ce",
+      "device",
       "donk",
+      "karrigan",
       "niko",
       "s1mple",
       "zywoo"

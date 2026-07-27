@@ -9,7 +9,6 @@ from pydantic import BaseModel, Field
 
 
 class PlayerIndexEntry(BaseModel):
-    """索引中的选手摘要条目"""
     name: str
     country: str
     status: str
@@ -20,7 +19,6 @@ class PlayerIndexEntry(BaseModel):
 
 
 class TeamIndexEntry(BaseModel):
-    """索引中的战队摘要条目"""
     name: str
     country: str
     region: str
@@ -30,14 +28,11 @@ class TeamIndexEntry(BaseModel):
 
 
 class Index(BaseModel):
-    """全局索引 — 由 build_index 脚本自动生成，禁止手动编辑"""
     last_built: datetime = Field(default_factory=datetime.now)
     player_count: int = 0
     team_count: int = 0
-
     players: dict[str, PlayerIndexEntry] = Field(default_factory=dict)
     teams: dict[str, TeamIndexEntry] = Field(default_factory=dict)
-
     by_country: dict[str, list[str]] = Field(default_factory=dict)
     by_role: dict[str, list[str]] = Field(default_factory=dict)
     by_status: dict[str, list[str]] = Field(default_factory=dict)

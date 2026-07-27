@@ -1,36 +1,15 @@
 {
-  "_comment": "复制此文件，修改后放入 data/players/<战队ID>/ 目录，重命名为 _team.json。每个字段说明见 docs/contribution-guide.md",
-
   "id": "",
   "name": "",
   "short_name": null,
   "country": "",
   "country_name": "",
   "region": "EU",
-  "organization": null,
-  "logo_url": null,
   "founded": null,
-  "disbanded": null,
   "status": "active",
   "current_roster": [],
   "coach": null,
-  "analyst": null,
-
-  "achievements": {
-    "major_titles": 0,
-    "major_appearances": 0,
-    "s_tier_titles": 0,
-    "total_prize_money": null,
-    "hltv_ranking_best": null,
-    "hltv_ranking_best_date": null
-  },
-
-  "social_links": {
-    "twitter": null,
-    "website": null,
-    "instagram": null
-  },
-
+  "major_titles": 0,
   "last_updated": "2026-07-27T00:00:00Z",
   "sources": [],
   "notes": null

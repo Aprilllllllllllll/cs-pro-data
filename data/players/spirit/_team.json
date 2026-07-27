@@ -5,28 +5,12 @@
   "country": "RU",
   "country_name": "Russia",
   "region": "EU",
-  "organization": "Team Spirit",
-  "logo_url": null,
   "founded": "2015",
-  "disbanded": null,
   "status": "active",
   "current_roster": ["donk", "sh1ro", "chopper", "magixx", "zont1x"],
   "coach": "hally",
-  "analyst": null,
-  "achievements": {
-    "major_titles": 1,
-    "major_appearances": 5,
-    "s_tier_titles": 4,
-    "total_prize_money": 4500000,
-    "hltv_ranking_best": 1,
-    "hltv_ranking_best_date": "2024-06"
-  },
-  "social_links": {
-    "twitter": "https://twitter.com/Team__Spirit",
-    "website": "https://teamspirit.gg",
-    "instagram": null
-  },
+  "major_titles": 1,
   "last_updated": "2026-07-27T00:00:00Z",
   "sources": ["liquipedia"],
-  "notes": "Perfect World Shanghai Major 2024 冠军，donk 成为史上最年轻 Major MVP"
+  "notes": "Perfect World Shanghai Major 2024 champions"
 }

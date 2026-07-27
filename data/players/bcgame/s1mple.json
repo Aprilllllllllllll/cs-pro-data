@@ -1,0 +1,152 @@
+{
+  "id": "s1mple",
+  "name": "Oleksandr Olehovych Kostyliev",
+  "country": "UA",
+  "country_name": "Ukraine",
+  "birth_date": "1997-10-02",
+  "status": "active",
+  "roles": [
+    "Rifler",
+    "AWPer"
+  ],
+  "current_team": {
+    "team_id": "bcgame",
+    "join_date": "2026-07-27",
+    "contract_expiry": null
+  },
+  "team_history": [
+    {
+      "team_id": "landodgers",
+      "start_date": "2013-01-01",
+      "end_date": "2014-01-01",
+      "status": "starter"
+    },
+    {
+      "team_id": "courage",
+      "start_date": "2014-02-12",
+      "end_date": "2014-04-13",
+      "status": "starter"
+    },
+    {
+      "team_id": "hashtag",
+      "start_date": "2014-04-14",
+      "end_date": "2014-04-29",
+      "status": "starter"
+    },
+    {
+      "team_id": "landodgers",
+      "start_date": "2014-04-29",
+      "end_date": "2014-01-01",
+      "status": "starter"
+    },
+    {
+      "team_id": "amazinggaming",
+      "start_date": "2014-01-01",
+      "end_date": "2014-09-09",
+      "status": "starter"
+    },
+    {
+      "team_id": "hellraisers",
+      "start_date": "2014-09-17",
+      "end_date": "2015-01-14",
+      "status": "starter"
+    },
+    {
+      "team_id": "datteam",
+      "start_date": "2015-01-15",
+      "end_date": "2015-02-01",
+      "status": "starter"
+    },
+    {
+      "team_id": "flipsid3",
+      "start_date": "2015-02-01",
+      "end_date": "2015-07-17",
+      "status": "starter"
+    },
+    {
+      "team_id": "flipsid3",
+      "start_date": "2015-07-17",
+      "end_date": "2015-10-23",
+      "status": "substitute"
+    },
+    {
+      "team_id": "evolution",
+      "start_date": "2015-07-20",
+      "end_date": "2015-07-26",
+      "status": "starter"
+    },
+    {
+      "team_id": "evolutiondark",
+      "start_date": "2015-07-26",
+      "end_date": "2015-08-25",
+      "status": "loan"
+    },
+    {
+      "team_id": "worstplayers",
+      "start_date": "2015-08-25",
+      "end_date": "2015-09-10",
+      "status": "loan"
+    },
+    {
+      "team_id": "hellraisers",
+      "start_date": "2015-09-13",
+      "end_date": "2015-10-22",
+      "status": "stand-in"
+    },
+    {
+      "team_id": "liquid",
+      "start_date": "2016-01-02",
+      "end_date": "2016-04-21",
+      "status": "starter"
+    },
+    {
+      "team_id": "worstplayers",
+      "start_date": "2016-05-08",
+      "end_date": "2016-06-06",
+      "status": "loan"
+    },
+    {
+      "team_id": "liquid",
+      "start_date": "2016-04-21",
+      "end_date": "2016-08-04",
+      "status": "substitute"
+    },
+    {
+      "team_id": "navi",
+      "start_date": "2016-08-04",
+      "end_date": "2023-10-26",
+      "status": "starter"
+    },
+    {
+      "team_id": "navi",
+      "start_date": "2023-10-26",
+      "end_date": "2025-07-28",
+      "status": "substitute"
+    },
+    {
+      "team_id": "falcons",
+      "start_date": "2024-09-27",
+      "end_date": "2024-11-21",
+      "status": "loan"
+    },
+    {
+      "team_id": "faze",
+      "start_date": "2025-05-05",
+      "end_date": "2025-07-09",
+      "status": "loan"
+    },
+    {
+      "team_id": "bcgame",
+      "start_date": "2025-07-28",
+      "end_date": null,
+      "status": "starter"
+    }
+  ],
+  "major_appearances": 0,
+  "major_titles": [],
+  "last_updated": "2026-07-27T01:34:56.552544Z",
+  "sources": [
+    "liquipedia"
+  ],
+  "notes": "HLTV Top 20: 5 entries"
+}

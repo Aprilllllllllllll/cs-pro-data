@@ -5,28 +5,12 @@
   "country": "FR",
   "country_name": "France",
   "region": "EU",
-  "organization": "Team Vitality",
-  "logo_url": null,
   "founded": "2013",
-  "disbanded": null,
   "status": "active",
   "current_roster": ["zywoo", "apEX", "ropz", "flameZ", "mezii"],
   "coach": "XTQZZZ",
-  "analyst": null,
-  "achievements": {
-    "major_titles": 1,
-    "major_appearances": 12,
-    "s_tier_titles": 7,
-    "total_prize_money": 6500000,
-    "hltv_ranking_best": 1,
-    "hltv_ranking_best_date": "2023-05"
-  },
-  "social_links": {
-    "twitter": "https://twitter.com/TeamVitality",
-    "website": "https://vitality.gg",
-    "instagram": null
-  },
+  "major_titles": 1,
   "last_updated": "2026-07-27T00:00:00Z",
   "sources": ["liquipedia"],
-  "notes": "BLAST Paris Major 2023 冠军，CS:GO 最后一届 Major 冠军"
+  "notes": "BLAST Paris Major 2023 champions"
 }
