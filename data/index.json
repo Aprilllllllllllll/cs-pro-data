@@ -1,0 +1,127 @@
+{
+  "last_built": "2026-07-27T00:48:30.539259Z",
+  "player_count": 4,
+  "team_count": 4,
+  "players": {
+    "niko": {
+      "name": "Nikola Kovač",
+      "country": "BA",
+      "status": "active",
+      "current_team": "falcons",
+      "roles": [
+        "Rifler",
+        "IGL"
+      ],
+      "major_titles": 0,
+      "file_path": "data\\players\\falcons\\niko.json"
+    },
+    "s1mple": {
+      "name": "Oleksandr Kostyliev",
+      "country": "UA",
+      "status": "active",
+      "current_team": "navi",
+      "roles": [
+        "AWPer",
+        "Rifler"
+      ],
+      "major_titles": 1,
+      "file_path": "data\\players\\navi\\s1mple.json"
+    },
+    "donk": {
+      "name": "Danil Kryshkovets",
+      "country": "RU",
+      "status": "active",
+      "current_team": "spirit",
+      "roles": [
+        "Entry",
+        "Rifler"
+      ],
+      "major_titles": 1,
+      "file_path": "data\\players\\spirit\\donk.json"
+    },
+    "zywoo": {
+      "name": "Mathieu Herbaut",
+      "country": "FR",
+      "status": "active",
+      "current_team": "vitality",
+      "roles": [
+        "AWPer"
+      ],
+      "major_titles": 1,
+      "file_path": "data\\players\\vitality\\zywoo.json"
+    }
+  },
+  "teams": {
+    "falcons": {
+      "name": "Team Falcons",
+      "country": "SA",
+      "region": "EU",
+      "status": "active",
+      "player_count": 5,
+      "file_path": "data\\players\\falcons\\_team.json"
+    },
+    "navi": {
+      "name": "Natus Vincere",
+      "country": "UA",
+      "region": "EU",
+      "status": "active",
+      "player_count": 5,
+      "file_path": "data\\players\\navi\\_team.json"
+    },
+    "spirit": {
+      "name": "Team Spirit",
+      "country": "RU",
+      "region": "EU",
+      "status": "active",
+      "player_count": 5,
+      "file_path": "data\\players\\spirit\\_team.json"
+    },
+    "vitality": {
+      "name": "Team Vitality",
+      "country": "FR",
+      "region": "EU",
+      "status": "active",
+      "player_count": 5,
+      "file_path": "data\\players\\vitality\\_team.json"
+    }
+  },
+  "by_country": {
+    "BA": [
+      "niko"
+    ],
+    "FR": [
+      "zywoo"
+    ],
+    "RU": [
+      "donk"
+    ],
+    "UA": [
+      "s1mple"
+    ]
+  },
+  "by_role": {
+    "AWPer": [
+      "s1mple",
+      "zywoo"
+    ],
+    "Entry": [
+      "donk"
+    ],
+    "IGL": [
+      "niko"
+    ],
+    "Rifler": [
+      "donk",
+      "niko",
+      "s1mple"
+    ]
+  },
+  "by_status": {
+    "active": [
+      "donk",
+      "niko",
+      "s1mple",
+      "zywoo"
+    ]
+  }
+}

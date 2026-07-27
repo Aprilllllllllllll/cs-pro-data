@@ -1,0 +1,32 @@
+{
+  "id": "falcons",
+  "name": "Team Falcons",
+  "short_name": "Falcons",
+  "country": "SA",
+  "country_name": "Saudi Arabia",
+  "region": "EU",
+  "organization": "Team Falcons",
+  "logo_url": null,
+  "founded": "2020",
+  "disbanded": null,
+  "status": "active",
+  "current_roster": ["niko", "magisk", "m0nesy", "kyxsan", "degster"],
+  "coach": "zonic",
+  "analyst": null,
+  "achievements": {
+    "major_titles": 0,
+    "major_appearances": 3,
+    "s_tier_titles": 0,
+    "total_prize_money": 1500000,
+    "hltv_ranking_best": 5,
+    "hltv_ranking_best_date": "2025-04"
+  },
+  "social_links": {
+    "twitter": "https://twitter.com/FalconsEsport",
+    "website": "https://falcons.sa",
+    "instagram": null
+  },
+  "last_updated": "2026-07-27T00:00:00Z",
+  "sources": ["liquipedia"],
+  "notes": "沙特资本支持的国际纵队，2025 年签下 NiKo 和 m0NESY 组成超级战队"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "donk",
+  "name": "Danil Kryshkovets",
+  "native_name": "Данил Крышковец",
+  "country": "RU",
+  "country_name": "Russia",
+  "birth_date": "2007-01-25",
+  "status": "active",
+  "roles": ["Entry", "Rifler"],
+  "years_active": "2023-present",
+  "current_team": {
+    "team_id": "spirit",
+    "join_date": "2023-07-01",
+    "contract_expiry": null
+  },
+  "team_history": [
+    {
+      "team_id": "spirit-academy",
+      "start_date": "2023-01-01",
+      "end_date": "2023-07-01",
+      "status": "starter"
+    }
+  ],
+  "major_appearances": 3,
+  "major_titles": [
+    {
+      "major_name": "Perfect World Shanghai Major 2024",
+      "date": "2024-12-15",
+      "team_id": "spirit",
+      "placement": "1st"
+    }
+  ],
+  "hltv_top20_rankings": [
+    {"year": 2025, "rank": 2},
+    {"year": 2024, "rank": 1}
+  ],
+  "mvp_medals": [
+    {"tournament": "Perfect World Shanghai Major 2024", "date": "2024-12-15", "tier": "S-Tier"},
+    {"tournament": "IEM Katowice 2024", "date": "2024-02-11", "tier": "S-Tier"},
+    {"tournament": "BLAST Premier Spring 2024", "date": "2024-06-16", "tier": "S-Tier"},
+    {"tournament": "BLAST Premier World Final 2024", "date": "2024-11-03", "tier": "S-Tier"}
+  ],
+  "statistics": {
+    "hltv_rating": 1.27,
+    "total_maps": 350,
+    "total_kills": null,
+    "headshot_percentage": 55.8,
+    "kills_per_round": 0.89,
+    "deaths_per_round": 0.63,
+    "impact_rating": 1.45,
+    "kast": 74.8,
+    "adr": 92.3
+  },
+  "social_links": {
+    "twitter": null,
+    "twitch": "https://twitch.tv/donk1225",
+    "instagram": null,
+    "youtube": null
+  },
+  "settings": {
+    "crosshair_code": null,
+    "config_url": null,
+    "sensitivity": 1.2,
+    "edpi": 960,
+    "zoom_sensitivity": 1.0,
+    "raw_input": true,
+    "resolution": "1280x960",
+    "aspect_ratio": "4:3",
+    "scaling_mode": "Stretched",
+    "monitor": "BenQ ZOWIE XL2566K",
+    "mouse": "Logitech G Pro X Superlight",
+    "keyboard": "Wooting 60HE",
+    "headset": "HyperX Cloud II",
+    "mousepad": "SteelSeries QcK Heavy"
+  },
+  "steam_id": null,
+  "steam_id64": null,
+  "faceit_profile": null,
+  "esea_profile": null,
+  "last_updated": "2026-07-27T00:00:00Z",
+  "sources": ["liquipedia", "hltv_manual", "prosettings"],
+  "notes": "CS2 时代崛起的天才少年，2024 年以 17 岁之龄成为 HLTV Top 20 第一名，Shanghai Major 2024 MVP。以其极致的爆头率和 Entry 能力闻名。"
+}

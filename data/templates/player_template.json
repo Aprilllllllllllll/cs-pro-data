@@ -1,0 +1,67 @@
+{
+  "_comment": "复制此文件，修改后放入 data/players/<战队ID>/ 目录。每个字段说明见 docs/contribution-guide.md",
+
+  "id": "",
+  "name": "",
+  "native_name": null,
+  "country": "",
+  "country_name": "",
+  "birth_date": null,
+  "status": "active",
+  "roles": [],
+  "years_active": null,
+
+  "current_team": null,
+
+  "team_history": [],
+
+  "major_appearances": 0,
+  "major_titles": [],
+  "hltv_top20_rankings": [],
+  "mvp_medals": [],
+
+  "statistics": {
+    "hltv_rating": null,
+    "total_maps": null,
+    "total_kills": null,
+    "headshot_percentage": null,
+    "kills_per_round": null,
+    "deaths_per_round": null,
+    "impact_rating": null,
+    "kast": null,
+    "adr": null
+  },
+
+  "social_links": {
+    "twitter": null,
+    "twitch": null,
+    "instagram": null,
+    "youtube": null
+  },
+
+  "settings": {
+    "crosshair_code": null,
+    "config_url": null,
+    "sensitivity": null,
+    "edpi": null,
+    "zoom_sensitivity": null,
+    "raw_input": null,
+    "resolution": null,
+    "aspect_ratio": null,
+    "scaling_mode": null,
+    "monitor": null,
+    "mouse": null,
+    "keyboard": null,
+    "headset": null,
+    "mousepad": null
+  },
+
+  "steam_id": null,
+  "steam_id64": null,
+  "faceit_profile": null,
+  "esea_profile": null,
+
+  "last_updated": "2026-07-27T00:00:00Z",
+  "sources": [],
+  "notes": null
+}

@@ -1,0 +1,32 @@
+{
+  "id": "navi",
+  "name": "Natus Vincere",
+  "short_name": "NAVI",
+  "country": "UA",
+  "country_name": "Ukraine",
+  "region": "EU",
+  "organization": "Natus Vincere Esports",
+  "logo_url": null,
+  "founded": "2009",
+  "disbanded": null,
+  "status": "active",
+  "current_roster": ["b1t", "jl", "aleksib", "im", "wonderful"],
+  "coach": "b1ad3",
+  "analyst": null,
+  "achievements": {
+    "major_titles": 1,
+    "major_appearances": 20,
+    "s_tier_titles": 8,
+    "total_prize_money": 10500000,
+    "hltv_ranking_best": 1,
+    "hltv_ranking_best_date": "2021-11"
+  },
+  "social_links": {
+    "twitter": "https://twitter.com/natusvincere",
+    "website": "https://navi.gg",
+    "instagram": null
+  },
+  "last_updated": "2026-07-27T00:00:00Z",
+  "sources": ["liquipedia"],
+  "notes": "CS:GO 时代唯一的 Major 全胜夺冠战队（PGL Stockholm 2021，未失一图）"
+}

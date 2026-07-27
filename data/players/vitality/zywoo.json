@@ -1,0 +1,91 @@
+{
+  "id": "zywoo",
+  "name": "Mathieu Herbaut",
+  "native_name": null,
+  "country": "FR",
+  "country_name": "France",
+  "birth_date": "2000-11-09",
+  "status": "active",
+  "roles": ["AWPer"],
+  "years_active": "2017-present",
+  "current_team": {
+    "team_id": "vitality",
+    "join_date": "2018-10-08",
+    "contract_expiry": null
+  },
+  "team_history": [
+    {
+      "team_id": "aAa",
+      "start_date": "2017-01-01",
+      "end_date": "2018-10-08",
+      "status": "starter"
+    }
+  ],
+  "major_appearances": 10,
+  "major_titles": [
+    {
+      "major_name": "BLAST.tv Paris Major 2023",
+      "date": "2023-05-21",
+      "team_id": "vitality",
+      "placement": "1st"
+    }
+  ],
+  "hltv_top20_rankings": [
+    {"year": 2025, "rank": 1},
+    {"year": 2024, "rank": 2},
+    {"year": 2023, "rank": 1},
+    {"year": 2022, "rank": 2},
+    {"year": 2021, "rank": 2},
+    {"year": 2020, "rank": 1},
+    {"year": 2019, "rank": 1}
+  ],
+  "mvp_medals": [
+    {"tournament": "BLAST.tv Paris Major 2023", "date": "2023-05-21", "tier": "S-Tier"},
+    {"tournament": "IEM Katowice 2025", "date": "2025-02-11", "tier": "S-Tier"},
+    {"tournament": "IEM Cologne 2024", "date": "2024-08-18", "tier": "S-Tier"},
+    {"tournament": "ESL Pro League S16", "date": "2022-10-02", "tier": "S-Tier"},
+    {"tournament": "IEM Winter 2021", "date": "2021-12-12", "tier": "S-Tier"},
+    {"tournament": "BLAST Premier Fall 2020", "date": "2020-12-13", "tier": "S-Tier"},
+    {"tournament": "IEM Beijing 2019", "date": "2019-11-10", "tier": "S-Tier"}
+  ],
+  "statistics": {
+    "hltv_rating": 1.27,
+    "total_maps": 1400,
+    "total_kills": null,
+    "headshot_percentage": 42.1,
+    "kills_per_round": 0.85,
+    "deaths_per_round": 0.58,
+    "impact_rating": 1.38,
+    "kast": 75.2,
+    "adr": 88.5
+  },
+  "social_links": {
+    "twitter": "https://twitter.com/zywoo",
+    "twitch": "https://twitch.tv/zywoo",
+    "instagram": "https://instagram.com/zywoocs",
+    "youtube": null
+  },
+  "settings": {
+    "crosshair_code": null,
+    "config_url": null,
+    "sensitivity": 2.0,
+    "edpi": 800,
+    "zoom_sensitivity": 1.0,
+    "raw_input": true,
+    "resolution": "1280x960",
+    "aspect_ratio": "4:3",
+    "scaling_mode": "Stretched",
+    "monitor": "BenQ ZOWIE XL2546K",
+    "mouse": "Pulsar Xlite V3 ES",
+    "keyboard": "Wooting 60HE",
+    "headset": "Beyerdynamic DT 990 Pro",
+    "mousepad": "ZOWIE G-SR-SE"
+  },
+  "steam_id": null,
+  "steam_id64": null,
+  "faceit_profile": null,
+  "esea_profile": null,
+  "last_updated": "2026-07-27T00:00:00Z",
+  "sources": ["liquipedia", "hltv_manual", "prosettings"],
+  "notes": "CS2 时代的统治级选手，HLTV Top 20 四次第一（2019、2020、2023、2025），BLAST Paris Major 2023 MVP。"
+}

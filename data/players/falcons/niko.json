@@ -1,0 +1,96 @@
+{
+  "id": "niko",
+  "name": "Nikola Kovač",
+  "native_name": null,
+  "country": "BA",
+  "country_name": "Bosnia and Herzegovina",
+  "birth_date": "1997-02-16",
+  "status": "active",
+  "roles": ["Rifler", "IGL"],
+  "years_active": "2012-present",
+  "current_team": {
+    "team_id": "falcons",
+    "join_date": "2025-01-01",
+    "contract_expiry": null
+  },
+  "team_history": [
+    {
+      "team_id": "g2",
+      "start_date": "2020-10-28",
+      "end_date": "2024-12-31",
+      "status": "starter"
+    },
+    {
+      "team_id": "faze",
+      "start_date": "2017-02-19",
+      "end_date": "2020-10-28",
+      "status": "starter"
+    },
+    {
+      "team_id": "mousesports",
+      "start_date": "2015-03-01",
+      "end_date": "2017-02-09",
+      "status": "starter"
+    }
+  ],
+  "major_appearances": 14,
+  "major_titles": [],
+  "hltv_top20_rankings": [
+    {"year": 2024, "rank": 4},
+    {"year": 2023, "rank": 2},
+    {"year": 2022, "rank": 5},
+    {"year": 2021, "rank": 3},
+    {"year": 2020, "rank": 4},
+    {"year": 2019, "rank": 11},
+    {"year": 2018, "rank": 3},
+    {"year": 2017, "rank": 2},
+    {"year": 2016, "rank": 11}
+  ],
+  "mvp_medals": [
+    {"tournament": "IEM Katowice 2024", "date": "2024-02-11", "tier": "S-Tier"},
+    {"tournament": "BLAST Premier Fall 2023", "date": "2023-11-26", "tier": "S-Tier"},
+    {"tournament": "IEM Cologne 2023", "date": "2023-08-06", "tier": "S-Tier"},
+    {"tournament": "ESL One New York 2017", "date": "2017-09-17", "tier": "S-Tier"},
+    {"tournament": "IEM Sydney 2018", "date": "2018-05-06", "tier": "S-Tier"}
+  ],
+  "statistics": {
+    "hltv_rating": 1.16,
+    "total_maps": 2100,
+    "total_kills": null,
+    "headshot_percentage": 48.5,
+    "kills_per_round": 0.78,
+    "deaths_per_round": 0.65,
+    "impact_rating": 1.28,
+    "kast": 72.3,
+    "adr": 83.1
+  },
+  "social_links": {
+    "twitter": "https://twitter.com/G2NiKo",
+    "twitch": "https://twitch.tv/niko",
+    "instagram": "https://instagram.com/nikocses",
+    "youtube": null
+  },
+  "settings": {
+    "crosshair_code": null,
+    "config_url": null,
+    "sensitivity": 1.35,
+    "edpi": 540,
+    "zoom_sensitivity": 0.9,
+    "raw_input": true,
+    "resolution": "1280x960",
+    "aspect_ratio": "4:3",
+    "scaling_mode": "Stretched",
+    "monitor": "BenQ ZOWIE XL2546K",
+    "mouse": "Razer DeathAdder V3 Pro",
+    "keyboard": "Razer BlackWidow V4 Pro",
+    "headset": "Razer BlackShark V2 Pro",
+    "mousepad": "ZOWIE G-SR"
+  },
+  "steam_id": null,
+  "steam_id64": null,
+  "faceit_profile": null,
+  "esea_profile": null,
+  "last_updated": "2026-07-27T00:00:00Z",
+  "sources": ["liquipedia", "hltv_manual", "prosettings"],
+  "notes": "最伟大的步枪手之一，HLTV Top 20 九次入选（2016-2024 连续九年），但至今未获得 Major 冠军。2025 年转会至 Team Falcons。"
+}
