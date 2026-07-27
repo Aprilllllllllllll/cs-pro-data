@@ -142,9 +142,16 @@
       "status": "starter"
     }
   ],
-  "major_appearances": 0,
-  "major_titles": [],
-  "last_updated": "2026-07-27T01:34:56.552544Z",
+  "major_appearances": 2,
+  "major_titles": [
+    {
+      "major_name": "PGL Major Stockholm 2021",
+      "date": "2021-01-01",
+      "team_id": "bcgame",
+      "placement": "1st"
+    }
+  ],
+  "last_updated": "2026-07-27T02:02:23.864173Z",
   "sources": [
     "liquipedia"
   ],

@@ -109,6 +109,78 @@ def _team_id(name: str) -> str:
     return mapping.get(name, re.sub(r'[^a-z0-9]', '', name))
 
 
+def _parse_major_data(player_id: str) -> tuple[int, list[dict]]:
+    """从渲染后的 HTML 解析 Major 参赛次数和冠军"""
+    params = {
+        "action": "parse", "page": player_id,
+        "prop": "text", "format": "json", "redirects": "1",
+    }
+    try:
+        resp = httpx.get(API_URL, params=params, headers={
+            "User-Agent": USER_AGENT, "Accept-Encoding": "gzip",
+        }, verify=False, timeout=30)
+        resp.raise_for_status()
+        html = resp.json()["parse"]["text"]["*"]
+    except Exception:
+        return 0, []
+
+    # 在 achievements 区域中找 Major 赛事
+    ach = re.search(r'id="Achievements"(.*?)(?:<h[23]|<div class="nav-footer)', html, re.DOTALL)
+    if not ach:
+        return 0, []
+
+    section = ach.group(1)
+    major_names: set[str] = set()
+    major_titles: list[dict] = []
+    # 已知的 Valve Major 赛事名称（来自 Liquipedia 的 data-sort-value）
+    known_majors = [
+        "PGL Major Stockholm 2021", "PGL Major Antwerp 2022",
+        "PGL Major Copenhagen 2024",
+        "IEM Rio Major 2022", "Intel Extreme Masters Rio Major 2022",
+        "BLAST.tv Paris Major 2023", "BLAST Paris Major 2023",
+        "BLAST.tv Austin Major 2025", "BLAST Austin Major 2025",
+        "Perfect World Shanghai Major 2024",
+        "MLG Columbus 2016", "MLG Major Championship Columbus 2016",
+        "ESL One Cologne 2016",
+        "ELEAGUE Major 2017", "ELEAGUE Major Atlanta 2017",
+        "PGL Major Krakow 2017",
+        "ELEAGUE Major 2018", "ELEAGUE Major Boston 2018",
+        "FACEIT Major 2018", "FACEIT Major London 2018",
+        "IEM Katowice Major 2019", "Intel Extreme Masters Katowice Major 2019",
+        "StarLadder Berlin Major 2019", "StarLadder Major Berlin 2019",
+    ]
+
+    # 找到所有带 Major 的比赛
+    for m in re.finditer(r'data-sort-value="([^"]*)"', section):
+        name = m.group(1).strip()
+        if name in known_majors:
+            major_names.add(name)
+
+    # 检查 Major 冠军：在包含 Major 的 table row 中找 1st
+    for name in major_names:
+        # 找到该 Major 名在 HTML 中的位置
+        idx = section.find(name)
+        if idx < 0:
+            continue
+        # 找到包含该 Major 名的 <tr> 块（精确匹配，不跨行）
+        start = section.rfind('<tr', 0, idx)
+        end = section.find('</tr>', idx)
+        if start < 0 or end < 0:
+            continue
+        row = section[start:end + 5]
+        if '1st' in row:
+            year_match = re.search(r'(\d{4})', name)
+            year = year_match.group(1) if year_match else "2000"
+            major_titles.append({
+                "major_name": name,
+                "date": f"{year}-01-01",
+                "team_id": "",
+                "placement": "1st",
+            })
+
+    return len(major_names), major_titles
+
+
 # ── 爬取 ──────────────────────────────────────────────────
 
 def fetch_wikitext(player_id: str) -> Optional[str]:
@@ -119,7 +191,7 @@ def fetch_wikitext(player_id: str) -> Optional[str]:
     try:
         resp = httpx.get(API_URL, params=params, headers={
             "User-Agent": USER_AGENT, "Accept-Encoding": "gzip",
-        }, timeout=30)
+        }, verify=False, timeout=30)
         resp.raise_for_status()
         data = resp.json()
         if "error" in data:
@@ -237,6 +309,18 @@ def scrape_player(player_id: str) -> Optional[Player]:
             seen.add(key)
             rankings.append(r)
 
+    # Major 数据
+    major_count, major_titles_data = _parse_major_data(player_id)
+    major_titles_list = [
+        MajorTitle(
+            major_name=m["major_name"],
+            date=date.fromisoformat(m["date"]),
+            team_id=m["team_id"] or _team_id(info.get("team", "")),
+            placement="1st",
+        )
+        for m in major_titles_data
+    ]
+
     return Player(
         id=pid,
         name=name,
@@ -247,8 +331,8 @@ def scrape_player(player_id: str) -> Optional[Player]:
         roles=roles,
         current_team=current_team if current_team_id else None,
         team_history=team_history,
-        major_appearances=0,
-        major_titles=[],
+        major_appearances=major_count,
+        major_titles=major_titles_list,
         last_updated=datetime.now(timezone.utc),
         sources=["liquipedia"],
         notes=f"HLTV Top 20: {len(rankings)} entries" if rankings else None,

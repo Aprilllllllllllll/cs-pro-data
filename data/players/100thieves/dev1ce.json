@@ -105,9 +105,22 @@
       "status": "starter"
     }
   ],
-  "major_appearances": 0,
-  "major_titles": [],
-  "last_updated": "2026-07-27T01:35:11.838250Z",
+  "major_appearances": 2,
+  "major_titles": [
+    {
+      "major_name": "StarLadder Berlin Major 2019",
+      "date": "2019-01-01",
+      "team_id": "100thieves",
+      "placement": "1st"
+    },
+    {
+      "major_name": "ELEAGUE Major Atlanta 2017",
+      "date": "2017-01-01",
+      "team_id": "100thieves",
+      "placement": "1st"
+    }
+  ],
+  "last_updated": "2026-07-27T02:02:53.629344Z",
   "sources": [
     "liquipedia"
   ],

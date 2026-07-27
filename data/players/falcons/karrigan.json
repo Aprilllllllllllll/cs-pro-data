@@ -166,9 +166,16 @@
       "status": "starter"
     }
   ],
-  "major_appearances": 0,
-  "major_titles": [],
-  "last_updated": "2026-07-27T01:35:16.092443Z",
+  "major_appearances": 1,
+  "major_titles": [
+    {
+      "major_name": "PGL Major Antwerp 2022",
+      "date": "2022-01-01",
+      "team_id": "falcons",
+      "placement": "1st"
+    }
+  ],
+  "last_updated": "2026-07-27T02:02:50.942695Z",
   "sources": [
     "liquipedia"
   ],

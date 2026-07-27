@@ -52,9 +52,22 @@
       "status": "starter"
     }
   ],
-  "major_appearances": 0,
-  "major_titles": [],
-  "last_updated": "2026-07-27T01:35:00.442786Z",
+  "major_appearances": 2,
+  "major_titles": [
+    {
+      "major_name": "BLAST.tv Paris Major 2023",
+      "date": "2023-01-01",
+      "team_id": "vitality",
+      "placement": "1st"
+    },
+    {
+      "major_name": "BLAST.tv Austin Major 2025",
+      "date": "2025-01-01",
+      "team_id": "vitality",
+      "placement": "1st"
+    }
+  ],
+  "last_updated": "2026-07-27T02:02:42.077963Z",
   "sources": [
     "liquipedia"
   ],
